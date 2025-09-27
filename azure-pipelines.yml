@@ -1,0 +1,34 @@
+trigger:
+- none
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '18.x'
+  displayName: 'Install Node.js'
+
+- script: |
+    npm install
+    npm run build
+  displayName: 'npm install and build'
+
+# Archive the build folder into a zip
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: 'build'
+    includeRootFolder: false
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/reactapp.zip'
+    replaceExistingArchive: true
+  displayName: 'Archive React build into zip'
+
+# Publish the zip as artifact
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)/reactapp.zip'
+    ArtifactName: 'reactapp'
+    publishLocation: 'Container'
+  displayName: 'Publish React zip artifact'

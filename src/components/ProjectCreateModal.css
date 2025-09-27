@@ -1,0 +1,170 @@
+/* ProjectCreateModal.css */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.modal-content {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 5px 20px rgba(30, 30, 80, 0.15);
+  width: 100%;
+  max-width: 680px;
+  position: relative;
+  animation: slideIn 0.3s ease-out;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 1rem;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  color: #1a237e;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #757575;
+  padding: 0;
+}
+
+.close-button:hover {
+  color: #1a237e;
+}
+
+.project-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+  color: #424242;
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #bdbdbd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #3f51b5;
+  box-shadow: 0 0 0 2px rgba(63, 81, 181, 0.2);
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.8rem;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  /* border-top: 1px solid #e0e0e0; */
+}
+
+.modal-content .error {
+  grid-column: 1 / -1;
+  color: #d32f2f;
+  background-color: #ffebee;
+  border: 1px solid #ef9a9a;
+  border-radius: 6px;
+  padding: 0.8rem;
+  margin-bottom: 0;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .project-form {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* React-Select Custom Styles */
+.form-group .css-b62m3t-container {
+  width: 100%;
+}
+
+.form-group .css-13cymwt-control, .form-group .css-t3ipsp-control {
+  border: 1px solid #bdbdbd;
+  border-radius: 6px;
+  min-height: 40px;
+  box-shadow: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group .css-13cymwt-control:hover, .form-group .css-t3ipsp-control:hover {
+  border-color: #9e9e9e;
+}
+
+.form-group .css-13cymwt-control.css-13cymwt-control--is-focused, .form-group .css-t3ipsp-control.css-t3ipsp-control--is-focused {
+  border-color: #3f51b5;
+  box-shadow: 0 0 0 2px rgba(63, 81, 181, 0.2);
+}
+
+.form-group .css-1dimb5e-singleValue {
+  color: #212121;
+}
+
+.form-group .css-1nmdiq5-menu {
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+
+.form-group .css-d7l1ni-option {
+  background-color: #e8eaf6;
+  color: #1a237e;
+}
+
+.form-group .css-9gakcf-option {
+  background-color: #f5f5f5;
+}

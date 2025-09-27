@@ -1,0 +1,157 @@
+/* Modern ProjectCard.css */
+
+.project-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+}
+
+.project-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.project-title {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+}
+
+.status-badge {
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.8em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-approved {
+  background-color: #e8f5e9;
+  color: #388e3c;
+}
+
+.status-pendingpidgeneration, .status-pendingsuperadminapproval, .status-needsrevision {
+  background-color: #fff8e1;
+  color: #f57c00;
+}
+
+.status-rejected {
+  background-color: #ffebee;
+  color: #d32f2f;
+}
+
+.project-card-body {
+  flex-grow: 1;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px 16px;
+}
+
+.info-item {
+  font-size: 0.9em;
+}
+
+.info-item strong {
+  font-weight: 600;
+  color: #666;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.info-item span {
+  color: #333;
+}
+
+.info-item.full-width {
+  grid-column: 1 / -1;
+  font-size: 1em;
+}
+
+.remarks-divider {
+  border: 0;
+  border-top: 1px solid #f0f0f0;
+  margin: 16px 0;
+}
+
+.remarks-section strong {
+  font-weight: 700;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.remarks-content {
+  background: #f9f9f9;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+.project-card-footer {
+  margin-top: 20px;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-edit {
+  background-color: #3498db;
+  color: white;
+}
+.btn-edit:hover { background-color: #2980b9; }
+
+.btn-delete {
+  background-color: #e74c3c;
+  color: white;
+}
+.btn-delete:hover { background-color: #c0392b; }
+
+.btn-submit {
+  background-color: #95a5a6;
+  color: white;
+}
+.btn-submit:hover { background-color: #7f8c8d; }
+
+.btn-approve {
+  background-color: #2ecc71;
+  color: white;
+}
+.btn-approve:hover { background-color: #27ae60; }
+
+.btn-reject {
+  background-color: #f39c12;
+  color: white;
+}
+.btn-reject:hover { background-color: #e67e22; }

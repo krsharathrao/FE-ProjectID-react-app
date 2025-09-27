@@ -1,0 +1,231 @@
+/* src/styles/LoginPage.css */
+
+.login-body {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.login-page-wrapper {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+@supports (height: 100dvh) {
+  .login-page-wrapper {
+    min-height: 100dvh;
+  }
+}
+
+.login-info-section {
+  flex: 1;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  text-align: center;
+}
+
+.login-info-content {
+  max-width: 450px;
+}
+
+.login-logo svg {
+  margin-bottom: 2rem;
+}
+
+.wow-login-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: white;
+  line-height: 1.2;
+}
+
+.wow-login-tagline {
+  font-size: 1.1rem;
+  font-weight: 300;
+  opacity: 0.9;
+    color: white;
+  line-height: 1.6;
+}
+
+.login-form-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f7f6;
+  min-height: 100vh;
+  min-width: 0;
+}
+
+.login-form {
+  width: 100%;
+  max-width: 420px;
+  min-height: 520px;
+  padding: 3.5rem 2.5rem 3.5rem 2.5rem;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.13);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.4rem;
+}
+
+.login-form-title {
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 0.7rem;
+  text-align: center;
+  letter-spacing: -0.5px;
+}
+
+.login-form-info {
+  color: #4a5568;
+  margin-bottom: 2.1rem;
+  text-align: center;
+  font-size: 1.04rem;
+  letter-spacing: 0.01em;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: block;
+  background: #f7fafc;
+  border-radius: 8px;
+  border: 1.5px solid #e2e8f0;
+  padding: 0;
+  transition: border-color 0.2s;
+}
+
+.form-group .fas {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #007bff;
+  font-size: 1.2rem;
+  min-width: 22px;
+  text-align: center;
+  opacity: 0.9;
+  pointer-events: none;
+  margin: 0;
+} 
+
+
+.form-group input {
+  width: 100%;
+  padding: 0.95rem 1rem 0.95rem 5rem;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1.08rem;
+  color: #222;
+  border-radius: 8px;
+  transition: box-shadow 0.2s, background 0.2s;
+}
+
+
+.form-group input::placeholder {
+  color: #a0aec0;
+  font-weight: 400;
+  font-size: 1.04rem;
+}
+
+.form-group:focus-within {
+  border-color: #007bff;
+  background: #eaf4ff;
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.07);
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.wow-login-btn {
+  width: 100%;
+  padding: 1.1rem 0;
+  border-radius: 8px;
+  border: none;
+  background: #007bff;
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 12px rgba(0, 123, 255, 0.08);
+}
+
+.wow-login-btn:hover, .wow-login-btn:focus {
+  background: #0056b3;
+  outline: none;
+}
+
+.wow-login-btn:hover {
+  background: #0056b3;
+}
+
+.wow-login-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: #dc3545;
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .login-page-wrapper {
+    flex-direction: column;
+  }
+
+  .login-info-section, .login-form-section {
+    flex: 1;
+    width: 100%;
+  }
+
+  .login-info-section {
+    padding: 2rem;
+  }
+
+  .login-form-section {
+    min-height: auto;
+    padding: 1.5rem 1rem;
+  }
+
+  .wow-login-title {
+    font-size: 2rem;
+  }
+
+  .login-form {
+    max-width: 100%;
+    max-height: 100%;
+    box-shadow: none;
+    border-radius: 0;
+    min-height: auto;
+    padding: 2rem 1.25rem;
+  }
+
+  .form-group input {
+    padding: 0.95rem 1rem;
+  }
+}
