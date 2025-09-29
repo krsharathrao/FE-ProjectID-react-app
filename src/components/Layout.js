@@ -59,6 +59,7 @@ const Layout = ({ children, title }) => {
             <li><NavLink to="/segments">Segment Management</NavLink></li>
             <li><NavLink to="/customers">Customer Management</NavLink></li>
             <li><NavLink to="/projects">Projects</NavLink></li>
+   <li><NavLink to="/projects-id-generator">Projects ID Generator</NavLink></li>
               </>
             )}
           
