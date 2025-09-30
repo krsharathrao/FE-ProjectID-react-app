@@ -2,7 +2,7 @@ import axios from 'axios';
 import { getUserInfo, handleAuthError } from '../utils/auth';
 
 const api = axios.create({
-  baseURL:'https://pidcreation.azurewebsites.net/api',
+  baseURL:'https://backend-app-service-e0e0bzg6eahnh8hr.centralindia-01.azurewebsites.net/api',
   headers: {
     'Content-Type': 'application/json',
   },
